@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 main {
     background-color: grey;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
 }
