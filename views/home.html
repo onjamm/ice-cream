@@ -23,15 +23,18 @@
         <fieldset>
           <legend class="pinformation">Personal Information</legend>
           <label for="name"> Name:</label>
+          <span class="err" id="err-name">First name is required.</span>
           <input type="text" id="name" name="name" required />
 
           <label for="email">Email:</label>
+          <span class="err" id="err-email">Email is required
           <input type="email" id="email" name="email" required />
         </fieldset>
 
         <!-- Order Details -->
         <fieldset>
           <legend>Order Details</legend>
+          <span class="err" id="err-flavor">Flavor required.</span>
           <select id="flavor" name="flavor">
             <option value="" disabled selected>Select Ice Cream Flavor</option>
             <option value="vanilla">Vanilla</option>
@@ -43,6 +46,7 @@
 
           <br />
           <label>Choose your cone:</label>
+          <span class="err" id="err-cone">First name is required.</span>
           <br />
           <label for="waffle-cone">
             <input
