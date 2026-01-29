@@ -81,3 +81,8 @@ textarea {
   right: 0;
   bottom: 10rem;
 }
+
+.err {
+  color: darkred;
+  display: none;
+}
