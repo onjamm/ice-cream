@@ -24,13 +24,13 @@ document.getElementById("ice-cream-form").onsubmit = () => {
   }
 
   //email validation
-  if (!flavor) {
+  if (!flavor || flavor === "") {
     document.getElementById("err-flavor").style.display = "block";
     isValid = false;
   }
 
   //email validation
-  if (!cone) {
+  if (!cone.checked) {
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
   }
