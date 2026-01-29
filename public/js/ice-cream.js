@@ -9,7 +9,7 @@ document.getElementById("ice-cream-form").onsubmit = () => {
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
   let flavor = document.getElementById("flavor").value.trim();
-  let cone = document.getElementById("cone").value;
+  let cone = document.getElementById("cone").value.trim();
 
   //first name validation
   if (!name) {
@@ -23,13 +23,13 @@ document.getElementById("ice-cream-form").onsubmit = () => {
     isValid = false;
   }
 
-  //email validation
+  //flavor validation
   if (!flavor) {
     document.getElementById("err-flavor").style.display = "block";
     isValid = false;
   }
 
-  //email validation
+  //cone validation
   if (!cone) {
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
