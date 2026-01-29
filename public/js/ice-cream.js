@@ -23,13 +23,13 @@ document.getElementById("ice-cream-form").onsubmit = () => {
     isValid = false;
   }
 
-  //flavor validation
+  //email validation
   if (!flavor) {
     document.getElementById("err-flavor").style.display = "block";
     isValid = false;
   }
 
-  //cone validation
+  //email validation
   if (!cone) {
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
