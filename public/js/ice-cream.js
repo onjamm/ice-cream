@@ -8,8 +8,8 @@ document.getElementById("ice-cream-form").onsubmit = () => {
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
-  let flavor = document.getElementById("flavor").value.trim();
-  let cone = document.getElementById("cone").value.trim();
+  let flavor = document.getElementById("flavor").value;
+  let cone = document.getElementById("cone");
 
   //first name validation
   if (!name) {
