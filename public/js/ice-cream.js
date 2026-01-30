@@ -1,17 +1,21 @@
-alert("Hello, ice cream!");
-
 //When you assign a property to a function you don't put parentheses or else it will run immediately
 document.getElementById("ice-cream-form").onsubmit = () => {
   clearErrors();
+
+  alert("Hello, ice cream!");
 
   let isValid = true;
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
   let flavor = document.getElementById("flavor").value;
-  let cone = document.getElementById("cone");
 
-  //first name validation
+  //Cones
+  let cup = document.getElementById("cup");
+  let waffle = document.getElementById("waffle-cone");
+  let sugar = document.getElementById("sugar-cone");
+
+  //name validation
   if (!name) {
     document.getElementById("err-name").style.display = "block";
     isValid = false;
@@ -23,14 +27,14 @@ document.getElementById("ice-cream-form").onsubmit = () => {
     isValid = false;
   }
 
-  //email validation
+  //flavor validation
   if (!flavor || flavor === "") {
     document.getElementById("err-flavor").style.display = "block";
     isValid = false;
   }
 
-  //email validation
-  if (!cone.checked) {
+  //cone validation
+  if (!cup.checked && !waffle.checked && !sugar.checked) {
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
   }
