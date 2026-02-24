@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>THANK YOU FOR YOUR ORDER, <%= order.name %>!</h1>
+    <h2>Order Details:</h2>
+    <ul>
+        <li>Email: <%= order.email %></li>
+        <li>Flavor: <%= order.flavor %></li>
+        <li>Cone: <%= order.cone %></li>
+    </ul>
+    </main>
 </body>
 </html>
+
+<!-- const order = {
+        name: req.body.fname;
+        email: req.body.email:
+        flavor: req.body.flavor;
+        cone: req.body.cone;
+    } -->

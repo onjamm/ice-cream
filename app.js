@@ -22,29 +22,29 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.post('/submit-order', (req, res) => {
+app.post('/order-button', (req, res) => {
     //Create JSON object to store order data
     const order = {
-        name: req.body.fname;
-        email: req.body.email:
-        flavor: req.body.flavor;
-        cone: req.body.cone;
+        name: req.body.name,
+        email: req.body.email,
+        flavor: req.body.flavor,
+        cone: req.body.cone,
     }
 
     //add order
     orders.push(order);
 
-    res.render('confirmation' {order})
-});, 
+    res.render('confirmation', {order})
+});
 
 
 app.get('/admin', (req, res) => {
     res.render('admin', {orders})
 })
 
-app.get('/confirmation' (req, res) => {
-    res.render('confirmation');
-} )
+app.get('/confirmation', (req, res) => {
+    res.render('confirmation', {order})
+})
 
 
 // Start the server and listen on the specified port
