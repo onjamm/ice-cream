@@ -9,12 +9,28 @@ const PORT = 3000;
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({ extended: true }));
+
+const orders = [];
+
+app.get('/', (req, res) => {
+    res.render('home');
+});
+
+app.get('/thank-you', (req, res) => {
+    res.render('confirmation');
+});
+
+app.post('/thank-you', (req, res) => {
+    const { flavor, toppings } = req.body;
+    orders.push({ flavor, toppings });
+    res.render('confirmation', { flavor, toppings });
+});
 // Define a default "route" ('/')
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
-app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
-});
 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
