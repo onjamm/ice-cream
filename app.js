@@ -22,12 +22,12 @@ app.get("/", (req, res) => {
 app.post("/order-button", (req, res) => {
   //Create JSON object to store order data
   const order = {
+    timestamp: new Date(),
     name: req.body.name,
     email: req.body.email,
     flavor: req.body.flavor,
     cone: req.body.cone,
     toppings: req.body.toppings ? req.body.toppings : "None",
-    timestamp: new Date(),
   };
 
   //add order
