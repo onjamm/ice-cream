@@ -86,3 +86,10 @@ textarea {
   color: darkred;
   display: none;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+}
