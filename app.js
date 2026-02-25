@@ -5,19 +5,16 @@ import express from 'express';
 const app = express();
 
 // Define the port number where our server will listen
-const PORT = 3006;
-
-const orders = [];
-//Set view engine to ejs
-app.set('view engine', 'ejs');
-
-app.use(express.urlencoded({ extended: true}));
+const PORT = 3000;
 
 app.use(express.static('public'));
 
-// Define a default "route" ('/')
-// req: contains information about the incoming request
-// res: allows us to send back a response to the client
+app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({ extended: true }));
+
+const orders = [];
+
 app.get('/', (req, res) => {
     res.render('home');
 });
@@ -46,6 +43,14 @@ app.get('/confirmation', (req, res) => {
     res.render('confirmation', {order})
 })
 
+app.post('/thank-you', (req, res) => {
+    const { flavor, toppings } = req.body;
+    orders.push({ flavor, toppings });
+    res.render('confirmation', { flavor, toppings });
+});
+// Define a default "route" ('/')
+// req: contains information about the incoming request
+// res: allows us to send back a response to the client
 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
