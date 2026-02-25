@@ -12,7 +12,7 @@
   <body>
     <main>
       <!-- Form -->
-      <form id="ice-cream-form" action="/order-button" method="POST">
+      <form id="ice-cream-form" action="/order-button" method="post">
         <h1>Ice Cream Order Form</h1>
         <img
           src="imgs/ice-cream.jpg"
@@ -23,7 +23,7 @@
         <fieldset>
           <legend class="pinformation">Personal Information</legend>
           <label for="name"> Name:</label>
-          <span class="err" id="err-name">First name is required.</span>
+          <span class="err" id="err-name">Name is required.</span>
           <input type="text" id="name" name="name" required />
 
           <label for="email">Email:</label>
@@ -45,8 +45,8 @@
           </select>
 
           <br />
+          <span class="err" id="err-cone">Cone is required.</span>
           <label>Choose your cone:</label>
-          <span class="err" id="err-cone">First name is required.</span>
           <br />
           <label for="waffle-cone">
             <input
@@ -91,7 +91,7 @@
         <label for="comments">Additional Comments:</label>
         <textarea id="comments" name="comments"></textarea>
 
-        <button type="submit" id="order-button">Submit Order</button>
+        <button type="submit" id="submit-button">Submit Order</button>
         <a href="/admin">View All Orders</a>
       </form>
     </main>

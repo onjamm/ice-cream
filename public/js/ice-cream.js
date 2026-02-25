@@ -21,14 +21,14 @@ document.getElementById("ice-cream-form").onsubmit = () => {
     isValid = false;
   }
 
-  //email validation
-  if (!flavor || flavor === "") {
+  //flavor validation
+  if (!flavor || flavor === "Select Ice Cream Flavor") {
     document.getElementById("err-flavor").style.display = "block";
     isValid = false;
   }
 
-  //email validation
-  if (!cone.checked) {
+  //cone validation
+  if (!document.querySelector('input[name="cone"]:checked')) {
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
   }
