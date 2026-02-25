@@ -1,5 +1,3 @@
-alert("Hello, ice cream!");
-
 //When you assign a property to a function you don't put parentheses or else it will run immediately
 document.getElementById("ice-cream-form").onsubmit = () => {
   clearErrors();
