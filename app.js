@@ -9,7 +9,6 @@ import dotenv from "dotenv";
 // load environment variables from .env file
 dotenv.config();
 
-console.log("DB_HOST:", prcoess.env.DB_HOST);
 // Create an instance of an Express application
 const app = express();
 
@@ -35,6 +34,7 @@ const pool = mysql2
   })
   .promise();
 
+console.log("DB_HOST:", process.env.DB_HOST);
 //Database test route
 app.get("/db-test", async (req, res) => {
   try {
